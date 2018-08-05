@@ -16,5 +16,12 @@
     {
       "url": "heroku/nodejs"
     }
-  ]
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "npm test"
+      }
+    }
+  }
 }
