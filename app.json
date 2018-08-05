@@ -19,8 +19,13 @@
   ],
   "environments": {
     "test": {
+      "buildpacks": [
+        {
+          "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+        }
+      ],
       "scripts": {
-        "test": "npm test"
+        "test": "npm run check"
       }
     }
   }
