@@ -16,5 +16,20 @@
     {
       "url": "heroku/nodejs"
     }
-  ]
+  ],
+  "environments": {
+    "test": {
+      "buildpacks": [
+        {
+          "url": "heroku/nodejs"
+        },
+        {
+          "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+        }
+      ],
+      "scripts": {
+        "test": "npm run check"
+      }
+    }
+  }
 }
