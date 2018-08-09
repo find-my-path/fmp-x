@@ -4,7 +4,7 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 // Configure Endpoints
-app.get('/api/', (req, res) => {
+app.get('/api', (req, res) => {
     res.send('Hello, World!')
 })
 

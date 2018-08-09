@@ -1,27 +1,30 @@
-# FmpX
+# FMP-X
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+This project tests learning outcomes of lean learning strategies in a practical application.
 
-## Development server
+## Developers
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Install Local Dependencies
 
-## Code scaffolding
+* Install Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+* Install NodeJS: https://nodejs.org/en/download/
+* Install the Heroku CLI: https://devcenter.heroku.com/articles/heroku-cli
+* Install Angular CLI: `npm install -g @angular/cli`
+* Install nodemon: `npm install -g nodemon`
+* Install local dependencies: `npm install`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Run Application Locally
 
-## Build
+1. Start server `nodemon server.js`
+2. Start application `npm run ng-serve`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Make Changes
 
-## Running unit tests
+1. Create a new branch `git branch -b "<branch-name>"`
+2. Make changes to code
+3. Add changes `git add .`
+4. Commit changes `git commit -m "<meaningful commit message>"`
+5. Push changes `git push origin <branch-name>`
+6. Open a pull request into master and request a review
+7. Confirm that all tests pass
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
