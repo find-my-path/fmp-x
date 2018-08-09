@@ -3,7 +3,10 @@
   "scripts": {
   },
   "env": {
-    "MONGODB_URI": {
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "HEROKU_PARENT_APP_NAME": {
       "required": true
     }
   },
@@ -22,9 +25,6 @@
   ],
   "environments": {
     "test": {
-      "env": {
-        "MONGODB_URI": ""
-      },
       "buildpacks": [
         {
           "url": "heroku/nodejs"
