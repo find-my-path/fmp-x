@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "ng-start": "ng serve --proxy-config proxy.conf.json",
+    "dev-api": "env $(cat .env) nodemon server.js",
+    "dev-web": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,6 +27,7 @@
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
+    "mongoose": "^5.2.7",
     "nodemon": "^1.18.3",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
