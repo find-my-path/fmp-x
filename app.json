@@ -22,6 +22,9 @@
   ],
   "environments": {
     "test": {
+      "env": {
+        "MONGODB_URI": ""
+      },
       "buildpacks": [
         {
           "url": "heroku/nodejs"
