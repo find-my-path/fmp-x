@@ -15,7 +15,7 @@ This project tests learning outcomes of lean learning strategies in a practical 
 
 ### Run Application Locally
 
-1. Copy config from Heroku stage `heroku config -s -a fmp-x-stage > .env`
+1. Create .env from Heroku config `heroku config -s -a fmp-x-stage | xargs > .env`
 2. Update .env to your liking for local
 2. Start api `npm run dev-api`
 3. Start web `npm run dev-web`
