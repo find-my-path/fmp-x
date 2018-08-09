@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "ng-start": "ng serve --proxy-config proxy.conf.json",
+    "dev-api": "env $(cat .env) nodemon server.js",
+    "dev-web": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
