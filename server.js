@@ -1,16 +1,21 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const morgan = require('morgan')
+
+const { logger } = require('./server/utils')
 
 const app = express()
 const PORT = process.env.PORT || 5000
 
+// Configure middleware
+app.use(morgan('combined', { stream: logger.stream }))
+
 // Configure Database Connection
-mongoose.connect(process.env.MONGODB_URI, {}, (err) => {
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true}, (err) => {
     if (err) {
-        console.log(process.env.MONGODB_URI)
-        return console.log('There was an error connecting to Mongo')
+        return logger.error('There was an error connecting to Mongo')
     }
-    return console.log('Connected to Mongo')
+    return logger.info('Connected to Mongo')
 })
 
 // Configure Endpoints
@@ -24,4 +29,4 @@ app.all("/*", function(req, res, next) {
     res.sendfile(`${__dirname}/dist/index.html`);
 });
 
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
+app.listen(PORT, () => logger.info(`Listening on port: ${PORT}`))
