@@ -13,13 +13,14 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/compiler-cli": "^6.0.3",
-    "@angular/cli": "~6.0.8",
     "express": "^4.16.3",
     "mongoose": "^5.2.7",
     "morgan": "^1.9.0",
     "nodemon": "^1.18.3",
     "winston": "^3.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "engines": {
+    "node": "10.8.0"
+  }
 }
