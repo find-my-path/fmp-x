@@ -17,8 +17,14 @@ This project tests learning outcomes of lean learning strategies in a practical 
 
 1. Create .env from Heroku config `heroku config -s -a fmp-x-stage | xargs > .env`
 2. Update .env to your liking for local
-2. Start api `npm run dev-api`
-3. Start web `npm run dev-web`
+2. Start api `npm run dev-api-serve`
+3. Start web `npm run dev-web-serve`
+
+### Run Unit Tests
+
+* Test watch api `npm run dev-api-test`
+* Test watch web `npm run dev-web-test`
+* Run all tests once `npm test`
 
 ### Make Changes
 
