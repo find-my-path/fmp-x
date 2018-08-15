@@ -1,6 +1,8 @@
 const express = require('express')
 const morgan = require('morgan')
 
+const calculator = require('../calculator')
+
 const { logger } = require('../utils')
 
 const app = express()
@@ -13,6 +15,8 @@ app.use(morgan('combined', { stream: logger.stream }))
 app.get('/api', (req, res) => {
     res.send('Hello, World!')
 })
+
+app.use('/api/calculator', calculator)
 
 // Serve Static Content
 app.use(express.static(`${__dirname}/../web/dist`))
