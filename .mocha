@@ -1,0 +1,3 @@
+--recursive ./**/*.spec.js
+--exclude ./**/web/**
+--exclude ./**/node_modules/**
